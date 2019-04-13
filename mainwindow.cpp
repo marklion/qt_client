@@ -5,6 +5,7 @@
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QMessageBox>
+#include <QDesktopServices>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -68,7 +69,7 @@ void MainWindow::on_Login_but_clicked()
 
 void MainWindow::on_exit_but_clicked()
 {
-    qApp->exit();
+    QDesktopServices::openUrl(QUrl("http://192.168.64.140/reg.html"));
 }
 
 void MainWindow::on_Networkreply()
